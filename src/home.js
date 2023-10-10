@@ -1,14 +1,14 @@
 function createElement(ele){
-    if(ele = "div"){
+    if(ele == "div"){
         return document.createElement("div");
     }
-    else if(ele == "a"){
+    if(ele == "a"){
         return document.createElement("a");
     }
-    else if(ele == "p"){
+    if(ele == "p"){
         return document.createElement("p");
     }
-    else if(ele == "h1"){
+    if(ele == "h1"){
         return document.createElement("h1");
     }
 }
@@ -16,9 +16,14 @@ function createElement(ele){
 export function header(){
     const headerContainer = createElement("div");
     
-    const home = createElement("a").textContent = "Home";
-    const about = createElement("a").textContent = "Menu";
-    const reservation = createElement("a").textContent = "Reservation";
+    const home = createElement("a");
+    home.textContent = "Home";
+
+    const about = createElement("a");
+    about.textContent = "Menu";
+
+    const reservation = createElement("a");
+    reservation.textContent = "Reservation";
 
     headerContainer.append(home,about,reservation)
     return headerContainer;
@@ -26,21 +31,41 @@ export function header(){
 export function main(){
     const mainContainer = createElement("div");
     
-    const title = createElement("h1").textContent = "Midnight Tacos";
+    const title = createElement("h1");
+    title.textContent = "Midnight Tacos";
     
     const aboutContainer = createElement("div");
-    const aboutHeading = createElement("h1").textContent = "Discover Culinary Excellence";
-    const aboutText = createElement("p").textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores iure ad qui laborum ipsam ipsum optio aut rerum accusantium, id quae consectetur eaque totam accusamus assumenda ullam perspiciatis necessitatibus saepe?"
+
+    const aboutHeading = createElement("h1");
+    aboutHeading.textContent = "Discover Culinary Excellence";
+    
+    const aboutText = createElement("p");
+    aboutText.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores iure ad qui laborum ipsam ipsum optio aut rerum accusantium, id quae consectetur eaque totam accusamus assumenda ullam perspiciatis necessitatibus saepe?";
+
     aboutContainer.append(aboutHeading, aboutText);
 
     const hoursContainer = createElement("div");
-    const hoursHeading = createElement("h1").textContent = "Hours";
-    const sun = createElement("p").textContent = "Sunday: Closed";
-    const tue = createElement("p").textContent = "Tuesday: 6pm-2am";
-    const wed = createElement("p").textContent = "Wednesday: 6pm-2am";
-    const thu = createElement("p").textContent = "Thursday: 6pm-2am";
-    const fri = createElement("p").textContent = "Friday: 6pm-2am";
-    const sat = createElement("p").textContent = "Saturday: 6pm-2am";
+    const hoursHeading = createElement("h1");
+    hoursHeading.textContent = "Hours";
+    
+    const sun = createElement("p");
+    sun.textContent = "Sunday: Closed";
+
+    const tue = createElement("p");
+    tue.textContent = "Tuesday: 6pm-2am";
+
+    const wed = createElement("p");
+    wed.textContent = "Wednesday: 6pm-2am";
+
+    const thu = createElement("p");
+    thu.textContent = "Thursday: 6pm-2am";
+
+    const fri = createElement("p")
+    fri.textContent = "Friday: 6pm-2am";
+
+    const sat = createElement("p")
+    sat.textContent = "Saturday: 6pm-2am";
+
     hoursContainer.append(hoursHeading,sun,tue,wed,thu,fri,sat);
 
     mainContainer.append(title,aboutContainer,hoursContainer);
@@ -48,10 +73,11 @@ export function main(){
 }
 
 export function footer(){
-    const footerContainer = document.createElement("div");
+    const footerContainer = createElement("div");
 
-    const copyright = createElement("p").textContent = "Copyright &#169 Midnight Tacos";
-    
+    const copyright = createElement("p");
+    copyright.textContent = "Copyright \u00A9 Midnight Tacos";
+
     footerContainer.append(copyright);
     return footerContainer
 }
