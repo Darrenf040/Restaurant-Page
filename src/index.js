@@ -1,7 +1,7 @@
-import homeLoad from './modules/home.js';
+import intialLoad from './modules/initial.js';
 import menuLoad from './modules/menu.js';
 
-homeLoad();
+intialLoad();
 
 const menuBtn = document.getElementById("menu");
 

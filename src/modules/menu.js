@@ -1,5 +1,4 @@
-import {createElement} from './home.js';
-import {header, footer} from './home.js';
+import {header, footer, createElement} from './initial.js';
 
 
 function menuContainer(){
