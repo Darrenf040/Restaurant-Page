@@ -1,16 +1,20 @@
-function createElement(ele){
+export function createElement(ele){
     if(ele == "div"){
         return document.createElement("div");
     }
-    if(ele == "a"){
+    else if(ele == "a"){
         return document.createElement("a");
     }
-    if(ele == "p"){
+    else if(ele == "p"){
         return document.createElement("p");
     }
-    if(ele == "h1"){
+    else if(ele == "h1"){
         return document.createElement("h1");
     }
+    else if(ele == "h2"){
+        return document.createElement("h2");
+    }
+
 }
 
 export function header(){
@@ -18,12 +22,15 @@ export function header(){
     
     const home = createElement("a");
     home.textContent = "Home";
+    home.id = "home";
 
     const about = createElement("a");
     about.textContent = "Menu";
+    about.id = "menu";
 
     const reservation = createElement("a");
     reservation.textContent = "Reservation";
+    reservation.id = "Reservation"
 
     headerContainer.append(home,about,reservation)
     return headerContainer;
