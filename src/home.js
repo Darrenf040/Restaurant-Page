@@ -2,8 +2,8 @@ export function createElement(ele){
     if(ele == "div"){
         return document.createElement("div");
     }
-    else if(ele == "a"){
-        return document.createElement("a");
+    else if(ele == "btn"){
+        return document.createElement("button");
     }
     else if(ele == "p"){
         return document.createElement("p");
@@ -20,15 +20,15 @@ export function createElement(ele){
 export function header(){
     const headerContainer = createElement("div");
     
-    const home = createElement("a");
+    const home = createElement("btn");
     home.textContent = "Home";
     home.id = "home";
 
-    const about = createElement("a");
+    const about = createElement("btn");
     about.textContent = "Menu";
     about.id = "menu";
 
-    const reservation = createElement("a");
+    const reservation = createElement("btn");
     reservation.textContent = "Reservation";
     reservation.id = "Reservation"
 
@@ -89,3 +89,7 @@ export function footer(){
     return footerContainer
 }
 
+export default function homeLoad(){
+    const content = document.getElementById("content")
+    content.append(header(), main(), footer());
+}

@@ -1,6 +1,8 @@
-import {header, main, footer} from './home.js';
-import menu from './menu.js';
+import homeLoad from './home.js';
+import menuLoad from './menu.js';
 
-const content = document.getElementById("content");
-content.append(header(), main(), footer());
+homeLoad();
 
+const menuBtn = document.getElementById("menu");
+
+menuBtn.addEventListener("click", menuLoad);

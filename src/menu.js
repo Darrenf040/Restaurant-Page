@@ -1,6 +1,8 @@
 import {createElement} from './home.js';
+import {header, footer} from './home.js';
 
-export default function menu(){
+
+function menuContainer(){
     const menuContainer = createElement("div");
 
     const title = createElement("h1");
@@ -78,3 +80,18 @@ export default function menu(){
     return menuContainer;
 }
 
+export default function menuLoad(){
+    const menuBtn = document.getElementById("menu");
+    const content = document.getElementById("content");
+    content.innerHTML = '';
+    
+    if(menuBtn){
+        if(menuBtn.classList != "active"){
+            menuBtn.classList.add("active");
+            content.append(header(), menuContainer(), footer());
+        }
+        else{
+            return;
+        }
+    }
+}
