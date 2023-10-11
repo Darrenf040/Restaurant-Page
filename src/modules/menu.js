@@ -16,7 +16,7 @@ function menuContainer(){
     const taco1 = createElement("h2");
     taco1.textContent = "Famous Street Taco";
     const tacoImg1 = new Image();
-    tacoImg1.src = "/taco-image.jpg";
+    tacoImg1.src = "/src/assets/images/taco-image.jpg";
     const price1 = createElement("p");
     price1.textContent = "$12";
     const tacoInfo1 = createElement("p");
@@ -25,7 +25,7 @@ function menuContainer(){
     const taco2 = createElement("h2");
     taco2.textContent = "Plain Jane";
     const tacoImg2 = new Image();
-    tacoImg2.src = "/taco2-image.jpg";
+    tacoImg2.src = "/src/assets/images/taco2-image.jpg";
     const price2 = createElement("p");
     price2.textContent = "$9";
     const tacoInfo2 = createElement("p");
@@ -41,7 +41,7 @@ function menuContainer(){
     const fries = createElement("h2");
     fries.textContent = "Loaded Fries";
     const friesImg = new Image();
-    friesImg.src = "/fries.jpg";
+    friesImg.src = "/src/assets/images/fries.jpg";
     const price3 = createElement("p");
     price3.textContent = "$4";
     const friesInfo = createElement("p");
@@ -52,7 +52,7 @@ function menuContainer(){
     const nachos = createElement("h2");
     nachos.textContent = "Loaded nachos";
     const nachosImg = new Image();
-    nachosImg.src = "/nachos.jpg";
+    nachosImg.src = "/src/assets/images/nachos.jpg";
     const price4 = createElement("p");
     price4.textContent = "$6";
     const nachosInfo = createElement("p");
@@ -68,7 +68,7 @@ function menuContainer(){
     const bev = createElement("h2");
     bev.textContent = "OrangeJuice";
     const bevImg = new Image();
-    bevImg.src = "/drink.jpg";
+    bevImg.src = "/src/assets/images/drink.jpg";
     const price5 = createElement("p");
     price5.textContent = "$2";
     const bevInfo = createElement("p");

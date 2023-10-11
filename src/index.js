@@ -1,5 +1,5 @@
-import homeLoad from './home.js';
-import menuLoad from './menu.js';
+import homeLoad from './modules/home.js';
+import menuLoad from './modules/menu.js';
 
 homeLoad();
 
