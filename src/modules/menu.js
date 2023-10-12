@@ -80,17 +80,8 @@ function menuContainer(){
 }
 
 export default function menuLoad(){
-    const menuBtn = document.getElementById("menu");
     const content = document.getElementById("content");
     content.innerHTML = '';
     
-    if(menuBtn){
-        if(menuBtn.classList != "active"){
-            menuBtn.classList.add("active");
-            content.append(header(), menuContainer(), footer());
-        }
-        else{
-            return;
-        }
-    }
+    content.append(header(), menuContainer(), footer());
 }

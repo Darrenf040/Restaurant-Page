@@ -1,3 +1,6 @@
+import menuLoad from './menu.js';
+import homeRefresh from './home.js';
+
 export function createElement(ele){
     if(ele == "div"){
         return document.createElement("div");
@@ -23,16 +26,18 @@ export function header(){
     const home = createElement("btn");
     home.textContent = "Home";
     home.id = "home";
+    home.addEventListener("click", homeRefresh);
 
-    const about = createElement("btn");
-    about.textContent = "Menu";
-    about.id = "menu";
+    const menu = createElement("btn");
+    menu.textContent = "Menu";
+    menu.id = "menu";
+    menu.addEventListener("click", menuLoad);
 
     const reservation = createElement("btn");
     reservation.textContent = "Reservation";
     reservation.id = "Reservation"
 
-    headerContainer.append(home,about,reservation)
+    headerContainer.append(home,menu,reservation)
     return headerContainer;
 }
 export function main(){
@@ -91,5 +96,6 @@ export function footer(){
 
 export default function homeLoad(){
     const content = document.getElementById("content")
+    
     content.append(header(), main(), footer());
 }
