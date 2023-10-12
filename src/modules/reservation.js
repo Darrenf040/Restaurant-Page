@@ -4,7 +4,7 @@ function reservationSection(){
     const content = document.getElementById("content");
 
     const reserve = document.createElement("div");
-    reserve.innerHTML = `<h1>Midnight Tacos</h1>
+    reserve.innerHTML = `
     <div class="reservation">
         <form action="">
             <h1>Make A Reservation</h1>

@@ -56,7 +56,6 @@ export function header(){
 }
 export function main(){
     const mainContainer = createElement("div");
-    const allContent = createElement
     mainContainer.classList.add("main");
     
     
@@ -71,7 +70,6 @@ export function main(){
 
     const aboutHeading = createElement("h1");
     aboutHeading.textContent = "Discover Culinary Excellence";
-    
     const aboutText = createElement("p");
     aboutText.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores iure ad qui laborum ipsam ipsum optio aut rerum accusantium, id quae consectetur eaque totam accusamus assumenda ullam perspiciatis necessitatibus saepe?";
 
