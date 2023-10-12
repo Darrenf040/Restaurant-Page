@@ -2,7 +2,7 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
-p, h1{
+p, h1, h2{
     margin: 0;
 }
 .home-page{
@@ -88,9 +88,29 @@ input{
     gap: 50px;
 }
 
-.card{
+.menu{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 0;
+}
+.menu h2{
+    font-size: 40px;
+}
+.menu p {
+    font-size: 25px;
+}
+.img-container{
+    width: 640px;
 }
 .menu img{
-    width: 100px;
+    width: 100%;
+}
+.menu-info{
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

@@ -5,13 +5,6 @@ function menuContainer(){
     const menuContainer = createElement("div");
     menuContainer.classList.add("menu");
 
-    const title = createElement("h1");
-    title.textContent = "Menu";
-
-    const tacos = createElement("h1");
-    tacos.textContent = "Tacos";
-
-    const tacosContainer = createElement("div");
 
     const tacoCard1 = createElement("div");
     tacoCard1.classList.add("card");
@@ -23,6 +16,7 @@ function menuContainer(){
     tacoImg1.src = "/src/assets/images/taco-image.jpg";
     const imgContainer1 = createElement("div");
     imgContainer1.append(tacoImg1)
+    imgContainer1.classList.add("img-container");
     const taco1left = createElement("div");
     taco1left.append(taco1,imgContainer1)
 
@@ -32,6 +26,7 @@ function menuContainer(){
     const tacoInfo1 = createElement("p");
     tacoInfo1.textContent = "Comes with 3 tacos, your choice of beef, chick, or pulled pork, jalepenos and tomatoes";
     taco1right.append(price1, tacoInfo1);
+    taco1right.classList.add("menu-info");
     
     tacoCard1.append(taco1left,taco1right);
 
@@ -45,6 +40,7 @@ function menuContainer(){
     tacoImg2.src = "/src/assets/images/taco2-image.jpg";
     const imgContainer2 = createElement("div");
     imgContainer2.append(tacoImg2);
+    imgContainer2.classList.add("img-container");
     taco2left.append(taco2, imgContainer2);
 
     const taco2right = createElement("div");
@@ -53,14 +49,12 @@ function menuContainer(){
     const tacoInfo2 = createElement("p");
     tacoInfo2.textContent = "3 Hard shell tacos with your choice of beef or chicken, shredded cheese, and jalepenos";
     taco2right.append(price2,tacoInfo2);
+    taco2right.classList.add("menu-info");
+
 
     tacoCard2.append(taco2left,taco2right);
 
-    tacosContainer.append(tacos, tacoCard1, tacoCard2);
 
-    const sidesContainer = createElement("div");
-    const sides = createElement("h1");
-    sides.textContent = "Sides";
 
     const friesCard = createElement("div");
     friesCard.classList.add("card");
@@ -71,6 +65,7 @@ function menuContainer(){
     friesImg.src = "/src/assets/images/fries.jpg";
     const imgContainer3 = createElement("div");
     imgContainer3.append(friesImg);
+    imgContainer3.classList.add("img-container");
     const friesLeft = createElement("div");
     friesLeft.append(fries,imgContainer3);
 
@@ -80,6 +75,7 @@ function menuContainer(){
     friesInfo.textContent = "Loaded fries with melted cheese, bacon, green onion, and chicken";
     const friesRight = createElement("div");
     friesRight.append(price3, friesInfo);
+    friesRight.classList.add("menu-info");
 
     friesCard.append(friesLeft,friesRight);
 
@@ -92,6 +88,7 @@ function menuContainer(){
     nachosImg.src = "/src/assets/images/nachos.jpg";
     const imgContainer4 = createElement("div");
     imgContainer4.append(nachosImg);
+    imgContainer4.classList.add("img-container");
     const nachosLeft = createElement("div");
     nachosLeft.append(nachos,imgContainer4);
 
@@ -101,40 +98,36 @@ function menuContainer(){
     nachosInfo.textContent = "Loaded nachos with 3 layer cheese";
     const nachosRight = createElement("div");
     nachosRight.append(price4,nachosInfo)
+    nachosRight.classList.add("menu-info");
+
 
     nachosCard.append(nachosLeft,nachosRight);
-
-    sidesContainer.append(sides, friesCard, nachosCard);
-
-    const bevContainer = createElement("div");
 
     const drinkCard = createElement("div");
     drinkCard.classList.add("card");
 
-    const drinks = createElement("h1");
-    drinks.textContent = "Drinks";
-
     const bev = createElement("h2");
-    bev.textContent = "OrangeJuice";
+    bev.textContent = "Apple Soda";
     const bevImg = new Image();
     bevImg.src = "/src/assets/images/drink.jpg";
     const imgContainer5 = createElement("div");
     imgContainer5.append(bevImg);
+    imgContainer5.classList.add("img-container");
     const bevLeft = createElement("div");
     bevLeft.append(bev, imgContainer5)
 
     const price5 = createElement("p");
     price5.textContent = "$2";
     const bevInfo = createElement("p");
-    bevInfo.textContent = "Refreshing sunny orange juice";
+    bevInfo.textContent = "Refreshing Apple Soda";
     const bevRight = createElement("div");
     bevRight.append(price5,bevInfo);
+    bevRight.classList.add("menu-info");
     
     drinkCard.append(bevLeft,bevRight);
 
-    bevContainer.append(drinks, drinkCard);
 
-    menuContainer.append(title, tacosContainer,sidesContainer, bevContainer);
+    menuContainer.append(tacoCard1, tacoCard2,friesCard, nachosCard,drinkCard);
     
     return menuContainer;
 }
