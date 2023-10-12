@@ -1,5 +1,7 @@
 import menuLoad from './menu.js';
 import homeRefresh from './home.js';
+import reservationLoad from './reservation.js';
+
 
 export function createElement(ele){
     if(ele == "div"){
@@ -17,12 +19,19 @@ export function createElement(ele){
     else if(ele == "h2"){
         return document.createElement("h2");
     }
+    else if(ele == 'footer'){
+        return document.createElement("footer");
+    }
 
 }
 
 export function header(){
     const headerContainer = createElement("div");
-    
+    headerContainer.classList.add("header");
+
+    const title = createElement("h1");
+    title.textContent = "Midnight Tacos";
+
     const home = createElement("btn");
     home.textContent = "Home";
     home.id = "home";
@@ -36,17 +45,29 @@ export function header(){
     const reservation = createElement("btn");
     reservation.textContent = "Reservation";
     reservation.id = "Reservation"
+    reservation.addEventListener("click", reservationLoad);
 
-    headerContainer.append(home,menu,reservation)
+    const links = createElement("div");
+    links.classList.add("links");
+    links.append(home,menu,reservation);
+
+    headerContainer.append(title, links)
     return headerContainer;
 }
 export function main(){
     const mainContainer = createElement("div");
+    const allContent = createElement
+    mainContainer.classList.add("main");
     
-    const title = createElement("h1");
-    title.textContent = "Midnight Tacos";
     
     const aboutContainer = createElement("div");
+    aboutContainer.classList.add("about-us");
+
+    const imageContainer = createElement("div");
+    imageContainer.classList.add("image-container")
+    const aboutImg = new Image();
+    aboutImg.src = '/src/assets/images/about.jpg';
+    imageContainer.append(aboutImg);
 
     const aboutHeading = createElement("h1");
     aboutHeading.textContent = "Discover Culinary Excellence";
@@ -54,38 +75,18 @@ export function main(){
     const aboutText = createElement("p");
     aboutText.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores iure ad qui laborum ipsam ipsum optio aut rerum accusantium, id quae consectetur eaque totam accusamus assumenda ullam perspiciatis necessitatibus saepe?";
 
-    aboutContainer.append(aboutHeading, aboutText);
+    const textContent = createElement("div");
+    textContent.append(aboutHeading,aboutText)
+    textContent.classList.add("text-content");
 
-    const hoursContainer = createElement("div");
-    const hoursHeading = createElement("h1");
-    hoursHeading.textContent = "Hours";
-    
-    const sun = createElement("p");
-    sun.textContent = "Sunday: Closed";
+    aboutContainer.append(textContent, imageContainer);
 
-    const tue = createElement("p");
-    tue.textContent = "Tuesday: 6pm-2am";
-
-    const wed = createElement("p");
-    wed.textContent = "Wednesday: 6pm-2am";
-
-    const thu = createElement("p");
-    thu.textContent = "Thursday: 6pm-2am";
-
-    const fri = createElement("p")
-    fri.textContent = "Friday: 6pm-2am";
-
-    const sat = createElement("p")
-    sat.textContent = "Saturday: 6pm-2am";
-
-    hoursContainer.append(hoursHeading,sun,tue,wed,thu,fri,sat);
-
-    mainContainer.append(title,aboutContainer,hoursContainer);
+    mainContainer.append(aboutContainer);
     return mainContainer;
 }
 
 export function footer(){
-    const footerContainer = createElement("div");
+    const footerContainer = createElement("footer");
 
     const copyright = createElement("p");
     copyright.textContent = "Copyright \u00A9 Midnight Tacos";
@@ -94,8 +95,18 @@ export function footer(){
     return footerContainer
 }
 
+function homePage(){
+
+    const allContent = createElement("div");
+
+    allContent.classList.add("home-page");
+    allContent.append(header(),main(),footer());
+    return allContent
+}
+
 export default function homeLoad(){
     const content = document.getElementById("content")
-    
-    content.append(header(), main(), footer());
+
+
+    content.append(homePage());
 }
