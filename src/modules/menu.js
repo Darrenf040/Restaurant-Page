@@ -1,5 +1,9 @@
 import {header, footer, createElement} from './initial.js';
-
+import tacoSrc1 from '../assets/images/taco-image.jpg';
+import tacoSrc2 from '../assets/images/taco2-image.jpg';
+import friesSrc from '../assets/images/fries.jpg';
+import nachosSrc from '../assets/images/nachos.jpg';
+import drinkSrc from '../assets/images/drink.jpg';
 
 function menuContainer(){
     const menuContainer = createElement("div");
@@ -13,7 +17,7 @@ function menuContainer(){
     const taco1 = createElement("h2");
     taco1.textContent = "Famous Street Taco";
     const tacoImg1 = new Image();
-    tacoImg1.src = "/src/assets/images/taco-image.jpg";
+    tacoImg1.src = tacoSrc1;
     const imgContainer1 = createElement("div");
     imgContainer1.append(tacoImg1)
     imgContainer1.classList.add("img-container");
@@ -37,7 +41,7 @@ function menuContainer(){
     const taco2 = createElement("h2");
     taco2.textContent = "Plain Jane";
     const tacoImg2 = new Image();
-    tacoImg2.src = "/src/assets/images/taco2-image.jpg";
+    tacoImg2.src = tacoSrc2;
     const imgContainer2 = createElement("div");
     imgContainer2.append(tacoImg2);
     imgContainer2.classList.add("img-container");
@@ -62,7 +66,7 @@ function menuContainer(){
     const fries = createElement("h2");
     fries.textContent = "Loaded Fries";
     const friesImg = new Image();
-    friesImg.src = "/src/assets/images/fries.jpg";
+    friesImg.src = friesSrc;
     const imgContainer3 = createElement("div");
     imgContainer3.append(friesImg);
     imgContainer3.classList.add("img-container");
@@ -85,7 +89,7 @@ function menuContainer(){
     const nachos = createElement("h2");
     nachos.textContent = "Loaded nachos";
     const nachosImg = new Image();
-    nachosImg.src = "/src/assets/images/nachos.jpg";
+    nachosImg.src = nachosSrc;
     const imgContainer4 = createElement("div");
     imgContainer4.append(nachosImg);
     imgContainer4.classList.add("img-container");
@@ -109,7 +113,7 @@ function menuContainer(){
     const bev = createElement("h2");
     bev.textContent = "Apple Soda";
     const bevImg = new Image();
-    bevImg.src = "/src/assets/images/drink.jpg";
+    bevImg.src = drinkSrc;
     const imgContainer5 = createElement("div");
     imgContainer5.append(bevImg);
     imgContainer5.classList.add("img-container");

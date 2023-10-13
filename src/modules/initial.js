@@ -1,6 +1,7 @@
 import menuLoad from './menu.js';
 import homeRefresh from './home.js';
 import reservationLoad from './reservation.js';
+import aboutSrc from '../assets/images/about.jpg';
 
 
 export function createElement(ele){
@@ -65,7 +66,7 @@ export function main(){
     const imageContainer = createElement("div");
     imageContainer.classList.add("image-container")
     const aboutImg = new Image();
-    aboutImg.src = '/src/assets/images/about.jpg';
+    aboutImg.src = aboutSrc;
     imageContainer.append(aboutImg);
 
     const aboutHeading = createElement("h1");
