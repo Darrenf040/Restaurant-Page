@@ -80,14 +80,6 @@ footer{
     font-size: 20px;
 }
 
-input{
-    display: block;
-}
-.reservation{
-    display: flex;
-    gap: 50px;
-}
-
 .menu{
     display: flex;
     flex-direction: column;
@@ -113,4 +105,63 @@ input{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.reservation-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.reservation-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-container p{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.contact-container h1, .contact-container h2{
+    font-size: 35px;
+}
+
+input{
+    display: block;
+    height: 30px;
+}
+.reservation{
+    display: flex;
+    gap: 125px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.form-container button{
+    color: white;
+    background-color: black;
+    border-style: none;
+    align-self: flex-start;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+.form-container button:hover{
+    opacity: 80%;
+}
+button{
+    cursor: pointer;
 }
