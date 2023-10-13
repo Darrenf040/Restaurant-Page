@@ -44,4 +44,10 @@ export default function resrvationLoad(){
     wrapper.className = "reservation-section";
     content.append(wrapper);
     wrapper.append(header(), reservationSection(), footer());
+
+    //update date input values with current date by default
+    const myDate = document.getElementById("date");
+    const today = new Date();
+    const format = `${today.getFullYear()}-0${today.getMonth()}-${today.getDate()}`;
+    myDate.value = format;
 }
