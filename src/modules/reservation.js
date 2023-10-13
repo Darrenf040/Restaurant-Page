@@ -48,6 +48,6 @@ export default function resrvationLoad(){
     //update date input values with current date by default
     const myDate = document.getElementById("date");
     const today = new Date();
-    const format = `${today.getFullYear()}-0${today.getMonth()}-${today.getDate()}`;
+    const format = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
     myDate.value = format;
 }
